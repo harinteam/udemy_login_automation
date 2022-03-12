@@ -36,10 +36,15 @@ time.sleep(30)
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.common.by import By
 options = webdriver.ChromeOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
-options.add_experimental_option("useAutomationExtension", False)
+# options.add_experimental_option("excludeSwitches", ["enable-automation"])
+# options.add_experimental_option("useAutomationExtension", False)
 service = ChromeService(executable_path="/usr/local/bin/chromedriver")
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get('https://www.halrez.web.id')
+driver.get('https://www.kai.id/')
+
+# driver.find_element(By.XPATH, "(//span[@id='select2-origination2-container'])[1]").click()
+# driver.find_element(By.XPATH, "(//input[@role='textbox'])[1]").send_keys("Bandung")
+# driver.find_element(By.XPATH, "(//input[@role='textbox'])[1]").send_keys(Keys.RETURN)
